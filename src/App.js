@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react"
+import React, { useEffect } from "react"
 import { atom, RecoilRoot, selector, useRecoilState, useRecoilValue } from "recoil"
 
 const initialState = {
@@ -140,12 +140,8 @@ function App() {
 
 export default function Root() {
 	return (
-		<React.StrictMode>
-			<RecoilRoot>
-				<Suspense fallback="TODO">
-					<App />
-				</Suspense>
-			</RecoilRoot>
-		</React.StrictMode>
+		<RecoilRoot>
+			<App />
+		</RecoilRoot>
 	)
 }
